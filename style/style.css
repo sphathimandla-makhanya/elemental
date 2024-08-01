@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f0f0f0; /* Optional: background color for better visibility */
+}
+
+.carousel-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel {
+    position: relative;
+    width: 100%; /* Set width to 100% of the container */
+    height: 100%; /* Set height to 100% of the container */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the carousel area */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative; /* Required for positioning pseudo-elements */
+    overflow: hidden; /* Ensures the gap effect stays within the circle */
+}
+
+.indicator::before,
+.indicator::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.indicator::before {
+    border: solid 3px transparent; /* Base transparent border */
+    border-top-color: white; /* Only show top border */
+    border-bottom-color: white; /* Only show bottom border */
+    border-left-width: 0; /* No left border */
+    border-right-width: 0; /* No right border */
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: solid 2px white;
+    box-sizing: border-box;
+    clip-path: inset(0 2px 0 2px); /* Creates the gap effect */
+}
+
+.indicator.active::before {
+    border-color: rgba(255, 255, 255, 0.8); /* Optional: Change border color for active indicator */
+}
+
+.indicator.active {
+    transform: rotate(45deg); /* Rotate active indicator */
+}
+
+.description {
+    width: 100%;
+    /* max-width: 900px; */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 20px; /* Space between carousel and paragraph */
+}
+
+.paraImage{
+    float: right;
+}
+
+.cards{
+    display: flex;
+    
+}
+
+.card{
+    background-color: blue;
+    border-color: blue;
+    margin: 2px;
+    padding-left: 10px;
+}
+
+.symbol{
+    font-size: 56px;
+}
