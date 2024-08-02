@@ -272,11 +272,13 @@ body {
 
 .arrow {
     width: 4vw;
-    height: 4vh;
+    height: auto;
     margin-left: auto;
+    max-width: 10vw; 
 }
 
 .icon {
     width: 5vw;
-    height: 10vh;
+    height: auto;
+    max-width: 12vw;
 }
