@@ -161,7 +161,7 @@ body {
 
 .blue-banner {
     position: absolute;
-    top: 50%;
+    top: 52.5%;
     left: 0;
     width: 40%;
     height: 5vw;
@@ -175,13 +175,13 @@ body {
 } 
 
 .blue-banner h1{
-    font-size: 2vw;
-    font-weight: 300;
+    font-size: 1vw;
+    font-weight: 100;
 }
 
 .black-banner {
     position: absolute;
-    top: 50%;
+    top: 52.5%;
     right: 0;
     width: 10%;
     height: 5vw;
@@ -196,17 +196,21 @@ body {
 
 .description {
     width: auto;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     line-height: 1.5;
     text-align: left;
     margin-top: 2vw;
+    margin-left: 2.6vw;
+    font-weight: 100;
+    color: rgb(9, 9, 9);
 }
 
 .paraImage{
     width: 25vw;
     height: auto;
     margin-top: 2.5vh;
-    margin-left: 2.5vh;
+    margin-left: 3vh;
+    margin-right: 5vh;
 }
 
 .flex {
@@ -225,7 +229,7 @@ body {
 
 .cards {
     display: flex;
-    width: 78%;
+    width: 75%;
     margin-top: 2vw;
 }
 
@@ -233,7 +237,7 @@ body {
     background-color:#061c2c;
     color: white;
     border: none;
-    margin: 0.2vw;
+    margin: 0.1vw;
     padding-left: 1vw;
     text-align: start;
     width: 33.333%;
@@ -247,7 +251,7 @@ body {
 
 .buttons {
     display: flex;
-    width: 78%;
+    width: 75%;
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
@@ -261,7 +265,7 @@ body {
 }
 
 .text {
-    font-size: 0.7vw;
+    font-size: 0.6vw;
     font-weight: normal;
     color: white;
 }
