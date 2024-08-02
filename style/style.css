@@ -274,11 +274,9 @@ body {
     width: 4vw;
     height: auto;
     margin-left: auto;
-    max-width: 10vw; 
 }
 
 .icon {
     width: 5vw;
     height: auto;
-    max-width: 12vw;
 }
