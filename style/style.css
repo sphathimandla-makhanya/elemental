@@ -272,11 +272,11 @@ body {
 
 .arrow {
     width: 4vw;
-    height: auto;
+    height: 4vh;
     margin-left: auto;
 }
 
 .icon {
     width: 5vw;
-    height: auto;
+    height: 10vh;
 }
