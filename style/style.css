@@ -9,37 +9,61 @@ body {
     background-color: white;
 }
 
+.navlogo img{
+    width: 10vw;
+    height: auto;
+    margin-left: 11vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.hamburger-container {
+    position: absolute;
+    top: 3vw; 
+    right: 12vw; 
+    z-index: 10;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.8vw; 
+    height: 1.3vw; 
+    cursor: pointer;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 0.2vw; 
+    background-color: #000;
+    border-radius: 0.15vw; 
+}
+
+
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 }
-
-/* .structure{
-width: 100%;
-} */
-
-/* .navlogo {
-    margin-bottom: 20px;
-} */
 
 .carousel-container {
     width: 80%;
-    height: 50%; 
+    height: 95vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 0.5vw;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 100%; 
     overflow: hidden;
 }
 
@@ -47,18 +71,18 @@ width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    height: 50%;
+    height: 100%; 
 }
 
 .carousel-item {
     flex: 0 0 100%;
-    height: 50%;
+    height: 100%; 
     box-sizing: border-box;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 50%;
+    height: 100%; 
     object-fit: cover;
 }
 
@@ -66,35 +90,31 @@ width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
-    color: #333;
+    font-size: 5vw;
+    color: white;
     text-decoration: none;
-    padding: 20px;
+    padding: 2vw;
     user-select: none;
     cursor: pointer;
     z-index: 1;
 }
 
-.prev {
-    left: 10px;
-}
-
 .next {
-    right: 10px;
+    right: 1vw;
 }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1vw;
+    right: 1vw;
     display: flex;
-    gap: 10px;
+    gap: 1vw;
     z-index: 1;
 }
 
 .indicator {
-    width: 15px;
-    height: 15px;
+    width: 1.5vw;
+    height: 1.5vw;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -111,7 +131,7 @@ width: 100%;
 }
 
 .indicator::before {
-    border: solid 3px transparent;
+    border: solid 0.3vw transparent;
     border-top-color: white;
     border-bottom-color: white;
     border-left-width: 0;
@@ -126,27 +146,46 @@ width: 100%;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: solid 2px white;
+    border: solid 0.2vw white;
     box-sizing: border-box;
-    clip-path: inset(0 2px 0 2px);
+    clip-path: inset(0 0.2vw 0 0.2vw);
 }
 
-/* .indicator.active::before {
+.indicator.active::before {
     border-color: rgba(255, 255, 255, 0.8);
-} */
+}
 
 .indicator.active {
     transform: rotate(45deg);
-    
 }
 
 .blue-banner {
     position: absolute;
-    top: 78%;
+    top: 50%;
     left: 0;
-    width: 45%;
-    height: 50px;
-    background-color: blue;
+    width: 40%;
+    height: 5vw;
+    background-color: rgba(36, 74, 194);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    z-index: 2;
+} 
+
+.blue-banner h1{
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.black-banner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10%;
+    height: 5vw;
+    background-color: rgba(0, 0, 0);
     color: white;
     display: flex;
     align-items: center;
@@ -157,74 +196,83 @@ width: 100%;
 
 .description {
     width: auto;
-    font-size: 16px;
+    font-size: 1.6vw;
     line-height: 1.5;
     text-align: left;
-    margin-top: 20px;
-    /* float: left; */
+    margin-top: 2vw;
 }
 
-/* .paraImage {
-    height: 10%;
-    width: 20%;
-} */
+.paraImage{
+    width: 25vw;
+    height: auto;
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+}
 
-.flex{
+.flex {
     display: flex;
 }
 
-@media screen and (max-width: 991px) {
-    .flex{
+@media screen and (max-width: 768px) {
+    .flex {
         display: block;
     }
     .paraImage {
         float: right;
+        /* margin-top: 2.5vh; */
     }
 }
 
 .cards {
     display: flex;
-    /* justify-content: space-around; */
     width: 78%;
-    margin-top: 20px;
+    margin-top: 2vw;
 }
 
 .card {
-    background-color: blue;
+    background-color:#061c2c;
     color: white;
     border: none;
-    margin: 2px;
-    padding-left: 10px;
+    margin: 0.2vw;
+    padding-left: 1vw;
     text-align: start;
     width: 33.333%;
 }
 
-.symbol {
-    font-size: 56px;
+.card h1{
+    font-size: 2vw;
+    font-weight: normal;
+    margin-right: 5vw;
 }
 
-.buttons{
-    display:flex;
-    width: 78%;
-}
-
-.btn{
+.buttons {
     display: flex;
-    background-color: blue;
-    padding-left: 10px;
-    margin: 3px;
+    width: 78%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.btn {
+    display: flex;
+    background-color: rgba(36, 74, 194);
+    padding-left: 1vw;
+    margin: 0.1vw;
     width: 23%;
 }
 
-.text{
-    font-size: 12px;
+.text {
+    font-size: 0.7vw;
     font-weight: normal;
     color: white;
 }
 
-.arrow{
-    font-size: 14px;
-    padding-left: 15px;
-    
+.arrow {
+    width: 4vw;
+    height: 4vh;
+    margin-left: auto;
 }
 
+.icon {
+    width: 5vw;
+    height: 10vh;
+}
